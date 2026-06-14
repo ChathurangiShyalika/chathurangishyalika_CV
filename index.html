@@ -49,6 +49,94 @@
             display: none;
         }
 
+        /* Make the homepage content use more horizontal space on large screens */
+        @media (min-width: 1200px) {
+            #about > .container {
+                width: 94%;
+                max-width: 1500px;
+            }
+
+            #about .col-md-5,
+            #about .col-md-4,
+            #about .col-md-3,
+            #about .col-md-12 {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            #about > .container {
+                width: 96%;
+                max-width: 1560px;
+            }
+        }
+
+
+        .announcement-side-panel {
+            position: sticky;
+            top: 105px;
+            max-height: 72vh;
+            overflow-y: auto;
+            margin-top: 28px;
+            padding: 18px 18px 14px 18px;
+            background: #fffafa;
+            border-left: 5px solid #440606;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+            border-radius: 8px;
+        }
+
+        .announcement-side-panel h2 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-family: 'Maven Pro';
+            color: #440606;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .announcement-side-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+
+        .announcement-side-list li {
+            font-size: 14px;
+            line-height: 1.45;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eadada;
+        }
+
+        .announcement-side-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .announcement-side-date {
+            display: block;
+            color: #be2424;
+            font-weight: 800;
+            margin-bottom: 3px;
+        }
+
+        .announcement-side-link {
+            display: inline-block;
+            margin-top: 6px;
+            font-weight: 800;
+            color: #440606;
+        }
+
+        @media (max-width: 991px) {
+            .announcement-side-panel {
+                position: relative;
+                top: auto;
+                max-height: 360px;
+                margin-top: 25px;
+                margin-bottom: 20px;
+            }
+        }
 
         .announcement-box {
             clear: both;
@@ -127,7 +215,8 @@
                 <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="experience.html">Experience</a></li>
                 <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="projects.html">Projects</a></li>
                 <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="publications.html">Publications</a></li>
-                <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="skills_certificates.html">Skills & Certificates</a></li>
+                <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="tutorials_engagements.html">Outreach</a></li>
+                <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="skills_certificates.html">Skills</a></li>
                 <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="Achievements.html">Achievements</a></li>
                 <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="blogpost.html">Blog Posts</a></li>
            <li><a style="font-size:80%; font-weight:700; font-family: 'Maven Pro'; color:gainsboro" href="voluntary.html">Voluntary Experiences</a></li>
@@ -168,7 +257,7 @@
     <!-- about -->
     <div class="section" id="about">
         <div class="container">
-            <div class="col-md-6" data-aos="fade-up">
+            <div class="col-md-5" data-aos="fade-up">
                 <h1 class="size-50">About me</h1>
                 <p style="font-size: medium;">I am a Ph.D. student in Computer Science at the AI Institute, advised by <strong><a href="https://amit.aiisc.ai/" target="_blank">Prof. Amit P. Sheth</a></strong> at the University of South Carolina. My research interests primarily lie in <strong>Agentic AI, Multimodal-AI, Generative-AI, Time Series Analysis, and Neurosymbolic-AI</strong>. I am particularly excited about the opportunities to apply my research interests to real-world problems such as <strong>rare-event prediction, anomaly detection, causal discovery, root cause analysis and event understanding </strong> in various domains. I am keen on exploring further domains and earning new knowledge to enhance my research skills, analytical thinking, and problem-solving. Additionally, I am deeply interested in collaborative, translational research that has the potential to make a broader and meaningful impact.</p>
 
@@ -193,7 +282,7 @@
 
 
 
-            <div class="col-md-6 about-img-div">
+            <div class="col-md-4 about-img-div">
                 <!-- <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div> -->
                 <img  style="margin-top: 5%;" src="./Chathurangi_Shyalika.jpeg" width="400" height="300"  class="img-responsive" alt="" align="right" data-aos="fade-right" data-aos-delay="0" />
  <br>
@@ -267,17 +356,35 @@
     </a>
 
 </div>
+            </div>
 
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="150">
+                <aside class="announcement-side-panel" aria-label="Latest announcements">
+                    <h2>Latest News</h2>
+                    <ul class="announcement-side-list">
+                        <li><span class="announcement-side-date">2026</span><strong>AssetOpsBench</strong> accepted to <strong>KDD 2026</strong> as a real-world benchmark for industrial asset management.</li>
+                        <li><span class="announcement-side-date">May 2026</span>Started as an <strong>AI Research Intern at IBM Research</strong>.</li>
+                        <li><span class="announcement-side-date">March 2026</span>I defended my <strong>Ph.D. Proposal</strong>. <a href="https://www.youtube.com/watch?v=ktJN6sapQ_k" target="_blank">Watch the proposal defense video.</a></li>
+                        <li><span class="announcement-side-date">2026</span><strong>IndustryAssetEQA</strong> accepted to <strong>ACL 2026</strong>.</li>
+                        <li><span class="announcement-side-date">2026</span>Co-leading the <strong>KDD 2026 AssetOpsBench tutorial</strong>.</li>
+                        <li><span class="announcement-side-date">2026</span><strong>Rare Event Prediction</strong> survey accepted to <strong>ACM Computing Surveys</strong>.</li>
+                        <li><span class="announcement-side-date">2026</span><strong>CausalPulse</strong> and <strong>CausalTrace</strong> accepted to AAAI venues.</li>
+                        <li><span class="announcement-side-date">2025</span><strong>SmartPilot</strong> received the <strong>Best Paper Award at IEEE CAI 2025</strong>.</li>
+                        <li><span class="announcement-side-date">May 2025</span>Started as a <strong>Neuro-symbolic AI Research Intern at Robert Bosch LLC</strong>.</li>
+                    </ul>
+                    <a class="announcement-side-link" href="#announcements">View all announcements</a>
+                </aside>
             </div>
 
             <div class="clearfix"></div>
             <div class="col-md-12" data-aos="fade-up" data-aos-delay="150">
-                <div class="announcement-box">
+                <div class="announcement-box" id="announcements">
                     <h1 class="size-50">Announcements</h1>
                     <ul class="announcement-list">
                         <li><span class="announcement-date">2026</span><strong>AssetOpsBench</strong> was accepted to <strong>KDD 2026</strong> as a real-world benchmark for AI-driven task automation in industrial asset management.</li>
                         <li><span class="announcement-date">2026</span>Co-leading the <strong>KDD 2026 tutorial</strong>, "Building Reliable Industrial Agents with MCP: A Hands-on AssetOpsBench Tutorial for AI-Driven Operations."</li>
                         <li><span class="announcement-date">May 2026</span>Started as an <strong>AI Research Intern at IBM Research</strong>, working on industrial AI agents, AssetOpsBench scenarios, embodied question answering, failure-metadata knowledge graphs, and automated evaluation pipelines.</li>
+                        <li><span class="announcement-date">March 2026</span>Defended my <strong>Ph.D. Proposal</strong>: "Neurosymbolic Multi-Agent AI for Robust, Intelligent, and Trustworthy Industrial Systems." <a href="https://www.youtube.com/watch?v=ktJN6sapQ_k" target="_blank">Watch the proposal defense video.</a></li>
                         <li><span class="announcement-date">2026</span><strong>IndustryAssetEQA</strong> was accepted to <strong>ACL 2026</strong>, presenting a neurosymbolic operational intelligence system for embodied question answering in industrial asset maintenance.</li>
                         <li><span class="announcement-date">2026</span>Paper accepted to <strong>CVPR 2026</strong>: "Where Should Knowledge Enter? A Layered Framework for Knowledge Infusion in Multimodal Iterative Generative Models."</li>
                         <li><span class="announcement-date">2026</span><strong>CausalPulse</strong> and <strong>CausalTrace</strong> were accepted to <strong>AAAI-MAKE 2026</strong> and <strong>AAAI-IAAI 2026</strong>, respectively, advancing neurosymbolic multi-agent causal diagnostics for smart manufacturing.</li>

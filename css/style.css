@@ -76,7 +76,28 @@ h4:before {
     top: 9px;
 }
 
+/* Make homepage content use more horizontal space on large screens */
+@media (min-width: 1200px) {
+    #about > .container {
+        width: 94%;
+        max-width: 1500px;
+    }
 
+    #about .col-md-5,
+    #about .col-md-4,
+    #about .col-md-3,
+    #about .col-md-12 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 1500px) {
+    #about > .container {
+        width: 96%;
+        max-width: 1560px;
+    }
+}
 /* General
 ==================================================*/
 
